@@ -9,32 +9,18 @@ margin_left = -0.542847
 margin_right = -0.542847
 script = ExtResource( 1 )
 
-[node name="OpenFile" type="Button" parent="."]
-margin_left = 550.941
-margin_top = 16.284
-margin_right = 562.941
-margin_bottom = 36.284
-text = "Open File"
-
-[node name="SaveFile" type="Button" parent="."]
-margin_left = 555.284
-margin_top = 54.2799
-margin_right = 623.284
-margin_bottom = 74.2799
-text = "Save File"
-
 [node name="TextEdit" type="TextEdit" parent="."]
-margin_left = 3.79957
-margin_top = 4.3424
-margin_right = 507.8
-margin_bottom = 594.342
+margin_left = 4.0
+margin_top = 38.0
+margin_right = 1011.0
+margin_bottom = 594.0
 
 [node name="FileDialog" type="FileDialog" parent="."]
 margin_left = 161.0
 margin_top = 135.0
 margin_right = 836.0
 margin_bottom = 451.0
-window_title = "Open A File"
+window_title = "Open a File"
 mode = 0
 access = 2
 current_dir = "/Users/awooldridge/godot-games/text_edit"
@@ -52,7 +38,10 @@ current_dir = "/Users/awooldridge/godot-games/text_edit"
 current_file = "default_env.tres"
 current_path = "/Users/awooldridge/godot-games/text_edit/default_env.tres"
 
-[connection signal="pressed" from="OpenFile" to="." method="_on_OpenFile_pressed"]
-[connection signal="pressed" from="SaveFile" to="." method="_on_SaveFile_pressed"]
+[node name="MenuButtonFile" type="MenuButton" parent="."]
+margin_right = 167.0
+margin_bottom = 31.0
+text = "File"
+
 [connection signal="file_selected" from="FileDialog" to="." method="_on_FileDialog_file_selected"]
 [connection signal="file_selected" from="SaveDialog" to="." method="_on_SaveDialog_file_selected"]
